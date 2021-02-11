@@ -164,11 +164,59 @@
                     <tabBarItem key="tabBarItem" title="Show Card" image="star.fill" catalog="system" id="rxQ-xy-Crj"/>
                     <connections>
                         <outlet property="tableView" destination="C2E-E0-p9O" id="hEk-un-C3c"/>
+                        <segue destination="ae1-VU-OaM" kind="show" identifier="toUpdateVC" id="5Vq-97-lwV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pVY-YQ-1Nd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1898.5507246376812" y="430.58035714285711"/>
+        </scene>
+        <!--UpdateVC-->
+        <scene sceneID="lSe-fP-G4n">
+            <objects>
+                <viewController id="ae1-VU-OaM" customClass="UpdateVC" customModule="EnglishCard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="52v-TV-kBe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Turkish" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CM4-XH-eyH">
+                                <rect key="frame" x="111" y="182" width="193" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="English" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NLC-2j-LA8">
+                                <rect key="frame" x="111" y="262" width="193" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xmH-X7-Qsd">
+                                <rect key="frame" x="110" y="398" width="194" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Update">
+                                    <color key="titleColor" systemColor="systemOrangeColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="updateButtonClicked:" destination="ae1-VU-OaM" eventType="touchUpInside" id="w1c-wi-0oB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bM6-ub-EnN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ufa-0g-unL"/>
+                    <connections>
+                        <outlet property="englishUpdateLabel" destination="NLC-2j-LA8" id="yb6-g5-Ka7"/>
+                        <outlet property="turkishUpdateLabel" destination="CM4-XH-eyH" id="Omw-WQ-qWr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zgc-Wz-jXy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2995.6521739130435" y="430.58035714285711"/>
         </scene>
         <!--Settings-->
         <scene sceneID="MRu-zS-OPl">

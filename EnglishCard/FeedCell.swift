@@ -12,7 +12,7 @@ class FeedCell: UITableViewCell {
     @IBOutlet weak var turkishLabel: UILabel!
     @IBOutlet weak var englishLabel: UILabel!
     
-    
+  
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -20,8 +20,9 @@ class FeedCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+ 
        
     }
+    
 
 }

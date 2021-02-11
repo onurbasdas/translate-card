@@ -15,26 +15,26 @@ class UploadViewController: UIViewController {
     @IBOutlet weak var englishText: UITextField!
     @IBOutlet weak var sendButton: UIButton!
     
-    
+    var db: Firestore!
+    var childArray = [Child]()
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-       
     }
     
+   
 
     @IBAction func sendButtonClicked(_ sender: Any) {
         let firestoreDatabase = Firestore.firestore()
-        var firestoreReference : DocumentReference? = nil
+//        var firestoreReference : DocumentReference? = nil
         
         let userID : String = (Auth.auth().currentUser?.uid)!
         print("Current user ID is" + userID)
         
-        let firestoreCard = ["turkish" : turkishText.text!, "english" : englishText.text!] as [String: Any]
+        let childArray = ["turkish" : turkishText.text!, "english" : englishText.text!] as [String: Any]
         
-        firestoreReference = firestoreDatabase.collection("Users").document(userID).collection("Cards").addDocument(data: firestoreCard, completion: { (error) in
+         firestoreDatabase.collection("Users").document(userID).collection("Cards").addDocument(data: childArray, completion: { (error) in
             if error != nil{
                 self.makeAlert(titleInput: "Error", messageInput: error?.localizedDescription ?? "Error")
             }else{
@@ -43,6 +43,7 @@ class UploadViewController: UIViewController {
                 self.tabBarController?.selectedIndex = 1
             }
         })
+        
     }
     
     
