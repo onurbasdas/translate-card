@@ -93,12 +93,12 @@
 				B9B16E8225D2C61A00C4813C /* FeedViewController.swift */,
 				B9B16E8825D2C64300C4813C /* SettingsViewController.swift */,
 				B9B16E8C25D2E4D000C4813C /* FeedCell.swift */,
+				B91B88F125D529B600302FB5 /* UpdateVC.swift */,
 				B90925AC25D2BCE800D4D1FC /* Main.storyboard */,
 				B90925AF25D2BCEA00D4D1FC /* Assets.xcassets */,
 				B90925B125D2BCEA00D4D1FC /* LaunchScreen.storyboard */,
 				B90925B425D2BCEA00D4D1FC /* Info.plist */,
 				B90925BB25D2BD9900D4D1FC /* GoogleService-Info.plist */,
-				B91B88F125D529B600302FB5 /* UpdateVC.swift */,
 			);
 			path = EnglishCard;
 			sourceTree = "<group>";

@@ -49,8 +49,6 @@ class ViewController: UIViewController {
                     ]
                     
                     let newUser = Firestore.firestore()
-                    
-                    
                     let userID : String = (Auth.auth().currentUser?.uid)!
                     print("Current user ID is " + userID)
                     
