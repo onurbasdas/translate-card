@@ -15,25 +15,21 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     var userTurkishArray = [String]()
     var userEnglishArray = [String]()
     var db: Firestore!
-//    var childArray = [Child]()
-//    {
-//        didSet {
-//            DispatchQueue.main.async {
-//                self.tableView.reloadData()
-//            }
-//        }
-//    }
-    var chosenTurkishText = ""
-    var chosenEnglishText = ""
+    
+    
+    var chosenTurkishText: String  = ""
+    var chosenEnglishText: String  = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.backgroundColor = UIColor(named: "main")
         
         db = Firestore.firestore()
         getDataFirestore()
+        
     }
     
     
@@ -54,7 +50,6 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
                         
                         if let english = document.get("english") as? String {
                             self.userEnglishArray.append(english)
-                            print(document.documentID)
                         }
                         if let turkish = document.get("turkish") as? String {
                             self.userTurkishArray.append(turkish)
@@ -72,9 +67,6 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! FeedCell
-        //        let child = childArray[indexPath.row]
-        //        cell.turkishLabel.text = child.turkish
-        //        cell.englishLabel.text = child.english
         cell.turkishLabel.text = userTurkishArray[indexPath.row]
         cell.englishLabel.text = userEnglishArray[indexPath.row]
         
@@ -93,7 +85,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
                                     print(error.localizedDescription)
                                 } else {
                                     for document in snapshot!.documents {
-                                        //print("\(document.documentID) => \(document.data())")
+                                        
                                         self.db.collection("Users").document((user?.uid)!).collection("Cards").document("\(document.documentID)").delete()
                                     }
                                 }})
@@ -101,6 +93,18 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             userTurkishArray.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
+        
+    }
+    
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let update = UIContextualAction(style: .normal, title: "Update") { [self] (action, view, nil) in
+            self.performSegue(withIdentifier: "toUpdateVC", sender: self)
+            
+            chosenTurkishText = userTurkishArray[indexPath.row]
+            chosenEnglishText = userEnglishArray[indexPath.row]
+            
+        }
+         return UISwipeActionsConfiguration(actions: [update])
         
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -111,15 +115,10 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             destinationVC.selectedEnglishNames = chosenEnglishText
         }
     }
-    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let update = UIContextualAction(style: .normal, title: "Update") { (action, view, nil) in
-            self.performSegue(withIdentifier: "toUpdateVC", sender: self)
-            
-            self.chosenTurkishText = self.userTurkishArray[indexPath.row]
-            self.chosenEnglishText = self.userEnglishArray[indexPath.row]
-        }
-        return UISwipeActionsConfiguration(actions: [update])
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.backgroundColor = UIColor.clear
     }
+    
     
 }
 

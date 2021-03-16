@@ -85,15 +85,10 @@
 		B90925A525D2BCE800D4D1FC /* EnglishCard */ = {
 			isa = PBXGroup;
 			children = (
+				B9384A7125E658330085BAD0 /* View */,
 				B91B88ED25D3D1CA00302FB5 /* Model */,
 				B90925A625D2BCE800D4D1FC /* AppDelegate.swift */,
 				B90925A825D2BCE800D4D1FC /* SceneDelegate.swift */,
-				B90925AA25D2BCE800D4D1FC /* ViewController.swift */,
-				B9B16E8525D2C63900C4813C /* UploadViewController.swift */,
-				B9B16E8225D2C61A00C4813C /* FeedViewController.swift */,
-				B9B16E8825D2C64300C4813C /* SettingsViewController.swift */,
-				B9B16E8C25D2E4D000C4813C /* FeedCell.swift */,
-				B91B88F125D529B600302FB5 /* UpdateVC.swift */,
 				B90925AC25D2BCE800D4D1FC /* Main.storyboard */,
 				B90925AF25D2BCEA00D4D1FC /* Assets.xcassets */,
 				B90925B125D2BCEA00D4D1FC /* LaunchScreen.storyboard */,
@@ -109,6 +104,19 @@
 				B91B88EE25D3D1E300302FB5 /* CardName.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		B9384A7125E658330085BAD0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B90925AA25D2BCE800D4D1FC /* ViewController.swift */,
+				B9B16E8525D2C63900C4813C /* UploadViewController.swift */,
+				B9B16E8225D2C61A00C4813C /* FeedViewController.swift */,
+				B9B16E8C25D2E4D000C4813C /* FeedCell.swift */,
+				B91B88F125D529B600302FB5 /* UpdateVC.swift */,
+				B9B16E8825D2C64300C4813C /* SettingsViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		CFCC5AE7F41D7E3D1D852F6A /* Pods */ = {

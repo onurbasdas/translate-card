@@ -7,6 +7,8 @@
 
 import UIKit
 import Firebase
+import NVActivityIndicatorView
+
 
 class ViewController: UIViewController {
     
@@ -15,6 +17,11 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let myColor : UIColor = UIColor.white
+        emailText.layer.borderColor = myColor.cgColor
+        emailText.layer.borderWidth = 1.0
+        passwordText.layer.borderColor = myColor.cgColor
+        passwordText.layer.borderWidth = 1.0
     }
     
     
@@ -24,7 +31,9 @@ class ViewController: UIViewController {
                 if error != nil{
                     self.makeAlert(titleInput: "Error", messageInput: error?.localizedDescription ?? "Error")
                 }else{
+                    self.startAnimation()
                     self.performSegue(withIdentifier: "toFeedVC", sender: nil)
+                    
                 }
             }
         }else{
@@ -73,6 +82,22 @@ class ViewController: UIViewController {
         let okButton = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil)
         alert.addAction(okButton)
         self.present(alert, animated: true, completion: nil)
+    }
+    fileprivate func startAnimation(){
+        let loading = NVActivityIndicatorView(frame: .zero, type: .ballPulse, color: .orange, padding: 10)
+        loading.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(loading)
+        NSLayoutConstraint.activate([
+            loading.widthAnchor.constraint(equalToConstant: 50),
+            loading.heightAnchor.constraint(equalToConstant: 50),
+            loading.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            loading.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+        ])
+        loading.startAnimating()
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2){
+            
+            loading.stopAnimating()
+        }
     }
 }
 
