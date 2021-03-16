@@ -16,14 +16,16 @@ class UpdateVC: UIViewController {
     @IBOutlet weak var englishUpdateText: UITextField!
     
     
-    var selectedTurkishNames : String =  ""
-    var selectedEnglishNames : String = ""
+    var selectedTurkishNames : String?
+    var selectedEnglishNames : String?
     
- 
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         
         turkishUpdateText.text = selectedTurkishNames
         englishUpdateText.text = selectedEnglishNames

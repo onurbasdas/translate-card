@@ -84,7 +84,7 @@ class ViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     fileprivate func startAnimation(){
-        let loading = NVActivityIndicatorView(frame: .zero, type: .ballPulse, color: .orange, padding: 10)
+        let loading = NVActivityIndicatorView(frame: .zero, type: .ballPulse, color: .systemPink, padding: 10)
         loading.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(loading)
         NSLayoutConstraint.activate([
@@ -94,7 +94,7 @@ class ViewController: UIViewController {
             loading.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
         loading.startAnimating()
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2){
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3){
             
             loading.stopAnimating()
         }

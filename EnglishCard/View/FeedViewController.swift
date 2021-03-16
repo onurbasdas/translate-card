@@ -17,8 +17,8 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     var db: Firestore!
     
     
-    var chosenTurkishText: String  = ""
-    var chosenEnglishText: String  = ""
+    var chosenTurkishText: String?
+    var chosenEnglishText: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -98,21 +98,34 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let update = UIContextualAction(style: .normal, title: "Update") { [self] (action, view, nil) in
-            self.performSegue(withIdentifier: "toUpdateVC", sender: self)
             
-            chosenTurkishText = userTurkishArray[indexPath.row]
-            chosenEnglishText = userEnglishArray[indexPath.row]
             
+
+
+            chosenTurkishText = self.userTurkishArray[indexPath.row]
+            chosenEnglishText = self.userEnglishArray[indexPath.row]
+            
+            performSegue(withIdentifier: "toUpdateVC", sender: self)
+
         }
-         return UISwipeActionsConfiguration(actions: [update])
-        
+        return UISwipeActionsConfiguration(actions: [update])
+
     }
+    
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//
+//        chosenTurkishText = self.userTurkishArray[indexPath.row]
+//        chosenEnglishText = self.userEnglishArray[indexPath.row]
+//        performSegue(withIdentifier: "toUpdateVC", sender: self)
+//
+//    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "toUpdateVC" {
             let destinationVC = segue.destination as! UpdateVC
-            destinationVC.selectedTurkishNames = chosenTurkishText
-            destinationVC.selectedEnglishNames = chosenEnglishText
+            destinationVC.selectedTurkishNames = chosenTurkishText!
+            destinationVC.selectedEnglishNames = chosenEnglishText!
+            
         }
     }
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
