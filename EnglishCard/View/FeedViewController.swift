@@ -99,26 +99,18 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let update = UIContextualAction(style: .normal, title: "Update") { [self] (action, view, nil) in
             
-            
-
-
-            chosenTurkishText = self.userTurkishArray[indexPath.row]
-            chosenEnglishText = self.userEnglishArray[indexPath.row]
+            chosenTurkishText = userTurkishArray[indexPath.row]
+            chosenEnglishText = userEnglishArray[indexPath.row]
             
             performSegue(withIdentifier: "toUpdateVC", sender: self)
 
         }
+        update.backgroundColor = UIColor(named: "label")
+        
         return UISwipeActionsConfiguration(actions: [update])
 
     }
     
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//
-//        chosenTurkishText = self.userTurkishArray[indexPath.row]
-//        chosenEnglishText = self.userEnglishArray[indexPath.row]
-//        performSegue(withIdentifier: "toUpdateVC", sender: self)
-//
-//    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "toUpdateVC" {
@@ -131,8 +123,6 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         cell.backgroundColor = UIColor.clear
     }
-    
-    
 }
 
 
