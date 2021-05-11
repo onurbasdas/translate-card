@@ -17,10 +17,13 @@
 		B90925BC25D2BD9900D4D1FC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B90925BB25D2BD9900D4D1FC /* GoogleService-Info.plist */; };
 		B91B88EF25D3D1E300302FB5 /* CardName.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91B88EE25D3D1E300302FB5 /* CardName.swift */; };
 		B91B88F225D529B700302FB5 /* UpdateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91B88F125D529B600302FB5 /* UpdateVC.swift */; };
+		B937CA24263CB1740096BBF1 /* SignUpExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = B937CA23263CB1740096BBF1 /* SignUpExt.swift */; };
+		B937CA28263CB1D70096BBF1 /* SignInExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = B937CA27263CB1D70096BBF1 /* SignInExt.swift */; };
+		B97C6D6D26321EC9004D1A73 /* CardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97C6D6B26321EC8004D1A73 /* CardTableViewCell.swift */; };
+		B97C6D6E26321EC9004D1A73 /* CardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B97C6D6C26321EC8004D1A73 /* CardTableViewCell.xib */; };
 		B9B16E8325D2C61A00C4813C /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B16E8225D2C61A00C4813C /* FeedViewController.swift */; };
 		B9B16E8625D2C63900C4813C /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B16E8525D2C63900C4813C /* UploadViewController.swift */; };
 		B9B16E8925D2C64300C4813C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B16E8825D2C64300C4813C /* SettingsViewController.swift */; };
-		B9B16E8D25D2E4D000C4813C /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B16E8C25D2E4D000C4813C /* FeedCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,10 +41,13 @@
 		B90925BB25D2BD9900D4D1FC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B91B88EE25D3D1E300302FB5 /* CardName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardName.swift; sourceTree = "<group>"; };
 		B91B88F125D529B600302FB5 /* UpdateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateVC.swift; sourceTree = "<group>"; };
+		B937CA23263CB1740096BBF1 /* SignUpExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpExt.swift; sourceTree = "<group>"; };
+		B937CA27263CB1D70096BBF1 /* SignInExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInExt.swift; sourceTree = "<group>"; };
+		B97C6D6B26321EC8004D1A73 /* CardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTableViewCell.swift; sourceTree = "<group>"; };
+		B97C6D6C26321EC8004D1A73 /* CardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardTableViewCell.xib; sourceTree = "<group>"; };
 		B9B16E8225D2C61A00C4813C /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		B9B16E8525D2C63900C4813C /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
 		B9B16E8825D2C64300C4813C /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		B9B16E8C25D2E4D000C4813C /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,15 +91,13 @@
 		B90925A525D2BCE800D4D1FC /* EnglishCard */ = {
 			isa = PBXGroup;
 			children = (
+				B937CA1E263CAF8E0096BBF1 /* Utils */,
 				B9384A7125E658330085BAD0 /* View */,
-				B91B88ED25D3D1CA00302FB5 /* Model */,
-				B90925A625D2BCE800D4D1FC /* AppDelegate.swift */,
-				B90925A825D2BCE800D4D1FC /* SceneDelegate.swift */,
-				B90925AC25D2BCE800D4D1FC /* Main.storyboard */,
-				B90925AF25D2BCEA00D4D1FC /* Assets.xcassets */,
-				B90925B125D2BCEA00D4D1FC /* LaunchScreen.storyboard */,
-				B90925B425D2BCEA00D4D1FC /* Info.plist */,
+				B97C6D6826321DA2004D1A73 /* Controllers */,
+				B92DD134263B9991009385EF /* Helpers */,
 				B90925BB25D2BD9900D4D1FC /* GoogleService-Info.plist */,
+				B90925B425D2BCEA00D4D1FC /* Info.plist */,
+				B90925AC25D2BCE800D4D1FC /* Main.storyboard */,
 			);
 			path = EnglishCard;
 			sourceTree = "<group>";
@@ -106,17 +110,46 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		B92DD134263B9991009385EF /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B90925AF25D2BCEA00D4D1FC /* Assets.xcassets */,
+				B90925B125D2BCEA00D4D1FC /* LaunchScreen.storyboard */,
+				B90925A825D2BCE800D4D1FC /* SceneDelegate.swift */,
+				B90925A625D2BCE800D4D1FC /* AppDelegate.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		B937CA1E263CAF8E0096BBF1 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B937CA23263CB1740096BBF1 /* SignUpExt.swift */,
+				B937CA27263CB1D70096BBF1 /* SignInExt.swift */,
+				B91B88ED25D3D1CA00302FB5 /* Model */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		B9384A7125E658330085BAD0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B97C6D6B26321EC8004D1A73 /* CardTableViewCell.swift */,
+				B97C6D6C26321EC8004D1A73 /* CardTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B97C6D6826321DA2004D1A73 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				B90925AA25D2BCE800D4D1FC /* ViewController.swift */,
 				B9B16E8525D2C63900C4813C /* UploadViewController.swift */,
 				B9B16E8225D2C61A00C4813C /* FeedViewController.swift */,
-				B9B16E8C25D2E4D000C4813C /* FeedCell.swift */,
 				B91B88F125D529B600302FB5 /* UpdateVC.swift */,
 				B9B16E8825D2C64300C4813C /* SettingsViewController.swift */,
 			);
-			path = View;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		CFCC5AE7F41D7E3D1D852F6A /* Pods */ = {
@@ -189,6 +222,7 @@
 			files = (
 				B90925B325D2BCEA00D4D1FC /* LaunchScreen.storyboard in Resources */,
 				B90925BC25D2BD9900D4D1FC /* GoogleService-Info.plist in Resources */,
+				B97C6D6E26321EC9004D1A73 /* CardTableViewCell.xib in Resources */,
 				B90925B025D2BCEA00D4D1FC /* Assets.xcassets in Resources */,
 				B90925AE25D2BCE800D4D1FC /* Main.storyboard in Resources */,
 			);
@@ -244,14 +278,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				B91B88F225D529B700302FB5 /* UpdateVC.swift in Sources */,
-				B9B16E8D25D2E4D000C4813C /* FeedCell.swift in Sources */,
 				B90925AB25D2BCE800D4D1FC /* ViewController.swift in Sources */,
 				B9B16E8625D2C63900C4813C /* UploadViewController.swift in Sources */,
 				B90925A725D2BCE800D4D1FC /* AppDelegate.swift in Sources */,
+				B97C6D6D26321EC9004D1A73 /* CardTableViewCell.swift in Sources */,
 				B91B88EF25D3D1E300302FB5 /* CardName.swift in Sources */,
+				B937CA28263CB1D70096BBF1 /* SignInExt.swift in Sources */,
 				B9B16E8325D2C61A00C4813C /* FeedViewController.swift in Sources */,
 				B90925A925D2BCE800D4D1FC /* SceneDelegate.swift in Sources */,
 				B9B16E8925D2C64300C4813C /* SettingsViewController.swift in Sources */,
+				B937CA24263CB1740096BBF1 /* SignUpExt.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

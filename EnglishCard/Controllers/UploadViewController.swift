@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+import FirebaseFirestore
 
 
 class UploadViewController: UIViewController {
@@ -23,29 +24,20 @@ class UploadViewController: UIViewController {
         super.viewDidLoad()
     }
     
-   
-
     @IBAction func sendButtonClicked(_ sender: Any) {
         let firestoreDatabase = Firestore.firestore()
-//        var firestoreReference : DocumentReference? = nil
-        
         let userID : String = (Auth.auth().currentUser?.uid)!
-        print("Current user ID is" + userID)
-        
         let childArray = ["turkish" : turkishText.text!, "english" : englishText.text!] as [String: Any]
-        
          firestoreDatabase.collection("Users").document(userID).collection("Cards").addDocument(data: childArray, completion: { (error) in
-            if error != nil{
+            if error != nil {
                 self.makeAlert(titleInput: "Error", messageInput: error?.localizedDescription ?? "Error")
-            }else{
+            } else {
                 self.turkishText.text = ""
                 self.englishText.text = ""
                 self.tabBarController?.selectedIndex = 1
             }
         })
-        
     }
-    
     
     func makeAlert(titleInput: String, messageInput: String) {
         let alert = UIAlertController(title: titleInput, message: messageInput, preferredStyle: UIAlertController.Style.alert)
@@ -53,7 +45,4 @@ class UploadViewController: UIViewController {
         alert.addAction(okButton)
         self.present(alert, animated: true, completion: nil)
     }
-    
-    
-
 }

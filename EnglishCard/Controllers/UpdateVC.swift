@@ -7,10 +7,9 @@
 
 import UIKit
 import Firebase
+import FirebaseFirestore
 
 class UpdateVC: UIViewController {
-    
-    
     
     @IBOutlet weak var turkishUpdateText: UITextField!
     @IBOutlet weak var englishUpdateText: UITextField!
@@ -25,11 +24,10 @@ class UpdateVC: UIViewController {
         db = Firestore.firestore()
         turkishUpdateText.text = selectedTurkishNames
         englishUpdateText.text = selectedEnglishNames
-        
-        configureUI()
+        configureUpdate()
     }
     
-    func configureUI() {
+    func configureUpdate() {
         let myColor : UIColor = UIColor.white
         turkishUpdateText.layer.borderColor = myColor.cgColor
         turkishUpdateText.layer.borderWidth = 1.0
@@ -42,22 +40,20 @@ class UpdateVC: UIViewController {
         let collectionReference = db.collection("Users").document((user?.uid)!).collection("Cards")
         let query : Query = collectionReference.whereField("turkish", isEqualTo: self.selectedTurkishNames!)
         query.getDocuments(completion: { (snapshot, error) in
-                            if let error = error {
-                                print(error.localizedDescription)
-                            } else {
-                                for document in snapshot!.documents {
-                                    
-                                    self.db.collection("Users").document((user?.uid)!).collection("Cards").document("\(document.documentID)").updateData(["turkish": self.turkishUpdateText.text!, "english": self.englishUpdateText.text!])
-                                }
-                            }})
+            if let error = error {
+                print(error.localizedDescription)
+            } else {
+                for document in snapshot!.documents {
+                    self.db.collection("Users").document((user?.uid)!).collection("Cards").document("\(document.documentID)").updateData(["turkish": self.turkishUpdateText.text!, "english": self.englishUpdateText.text!])
+                }
+            }
+        })
     }
     
     
     @IBAction func updateButtonClicked(_ sender: Any) {
-        //        self.performSegue(withIdentifier: "toTableVC", sender: nil)
         updateData()
         dismiss(animated: true, completion: nil)
-        //loadHomeScreen()
     }
     
     func loadHomeScreen() {
@@ -65,10 +61,4 @@ class UpdateVC: UIViewController {
         let mainTabBarController = storyBoard.instantiateViewController(identifier: "test")
         self.present(mainTabBarController, animated: true, completion: nil)
     }
-    
-    
-
-    
-    
-    
 }
