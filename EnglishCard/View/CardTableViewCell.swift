@@ -30,9 +30,7 @@ class CardTableViewCell: UITableViewCell {
         let greenValue = CGFloat(drand48())
         let blueValue = CGFloat(drand48())
         btnCard.backgroundColor = UIColor(red: redValue, green: greenValue, blue: blueValue, alpha: 1.0)
-      //  backView.backgroundColor = .white
-      
-
+        
         backView.layer.masksToBounds = false
         backView.layer.cornerRadius = 15.0
         
