@@ -93,6 +93,7 @@
 		B90925A525D2BCE800D4D1FC /* EnglishCard */ = {
 			isa = PBXGroup;
 			children = (
+				B91B88ED25D3D1CA00302FB5 /* Model */,
 				B937CA1E263CAF8E0096BBF1 /* Utils */,
 				B9384A7125E658330085BAD0 /* View */,
 				B97C6D6826321DA2004D1A73 /* Controllers */,
@@ -128,7 +129,6 @@
 			children = (
 				B937CA23263CB1740096BBF1 /* SignUpExt.swift */,
 				B937CA27263CB1D70096BBF1 /* SignInExt.swift */,
-				B91B88ED25D3D1CA00302FB5 /* Model */,
 				B907B327268A50ED00869BB4 /* Alert+Ext.swift */,
 			);
 			path = Utils;

@@ -28,11 +28,7 @@ class SettingsViewController: UIViewController {
     @IBAction func logoutClicked(_ sender: Any) {
         do{
             try Auth.auth().signOut()
-            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let mainTabBarController = storyBoard.instantiateViewController(identifier: "backLoginVC")
-            mainTabBarController.modalPresentationStyle = .fullScreen
-            mainTabBarController.modalTransitionStyle = .flipHorizontal
-            self.present(mainTabBarController, animated: true, completion: nil)
+            loadHomeScreen(name: "Main", identifier: "backLoginVC")
             
         } catch {
             print("Error")
