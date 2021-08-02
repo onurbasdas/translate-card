@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -9,16 +8,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Log In View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="backLoginVC" id="BYZ-38-t0r" customClass="ViewController" customModule="EnglishCard" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="backLoginVC" id="BYZ-38-t0r" customClass="LogInViewController" customModule="EnglishCard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JhD-C9-s62">
-                                <rect key="frame" x="37" y="448.5" width="340" height="50"/>
+                                <rect key="frame" x="37" y="404.5" width="526" height="50"/>
                                 <color key="backgroundColor" name="label"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="KYe-XE-edg"/>
@@ -32,13 +31,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="English Card" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BF7-s2-hlQ">
-                                <rect key="frame" x="20" y="84" width="374" height="38.5"/>
+                                <rect key="frame" x="20" y="40" width="560" height="38.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
                                 <color key="textColor" name="label"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Email" textAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="S82-kw-l4C">
-                                <rect key="frame" x="37" y="223.5" width="340" height="50"/>
+                                <rect key="frame" x="37" y="179.5" width="526" height="50"/>
                                 <color key="backgroundColor" name="main"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -49,7 +48,7 @@
                                 <textInputTraits key="textInputTraits" textContentType="email"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Password" textAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="q9t-tT-Hwi">
-                                <rect key="frame" x="37" y="323.5" width="340" height="50"/>
+                                <rect key="frame" x="37" y="279.5" width="526" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="fIF-nA-NgG"/>
                                 </constraints>
@@ -58,13 +57,13 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E-mail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nbg-2h-S24">
-                                <rect key="frame" x="37" y="197.5" width="340" height="21"/>
+                                <rect key="frame" x="37" y="153.5" width="526" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" name="label"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yvf-5w-b59">
-                                <rect key="frame" x="37" y="293.5" width="340" height="21"/>
+                                <rect key="frame" x="37" y="249.5" width="526" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="kXI-En-ELT"/>
                                 </constraints>
@@ -73,13 +72,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fHQ-xl-K3j">
-                                <rect key="frame" x="37" y="534.5" width="340" height="21"/>
+                                <rect key="frame" x="37" y="490.5" width="526" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UpH-N7-mBa">
-                                <rect key="frame" x="37" y="583.5" width="340" height="50"/>
+                                <rect key="frame" x="37" y="539.5" width="526" height="50"/>
                                 <color key="backgroundColor" name="label"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="8ui-u1-WDO"/>
@@ -130,18 +129,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="44.927536231884062" y="88.392857142857139"/>
+            <point key="canvasLocation" x="-300" y="86"/>
         </scene>
         <!--English Card-->
         <scene sceneID="x8w-uM-ecC">
             <objects>
                 <viewController storyboardIdentifier="test" id="F6N-Hc-nlq" customClass="FeedViewController" customModule="EnglishCard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BJk-NS-MZd">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="C2E-E0-p9O">
-                                <rect key="frame" x="0.0" y="140" width="414" height="673"/>
+                                <rect key="frame" x="0.0" y="96" width="600" height="455"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="F6N-Hc-nlq" id="4bp-pI-aIN"/>
@@ -166,34 +165,34 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pVY-YQ-1Nd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2905.7971014492755" y="430.58035714285711"/>
+            <point key="canvasLocation" x="1009" y="1639"/>
         </scene>
         <!--UpdateVC-->
         <scene sceneID="lSe-fP-G4n">
             <objects>
                 <viewController id="ae1-VU-OaM" customClass="UpdateVC" customModule="EnglishCard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="52v-TV-kBe">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="English" borderStyle="roundedRect" placeholder="English" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jUt-Qx-3tv">
-                                <rect key="frame" x="50" y="184" width="314" height="34"/>
+                                <rect key="frame" x="50" y="194" width="500" height="44"/>
                                 <color key="backgroundColor" name="main"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="25"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Turkish" borderStyle="roundedRect" placeholder="Turkish" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U7A-yx-5mw">
-                                <rect key="frame" x="50" y="100" width="314" height="34"/>
+                                <rect key="frame" x="50" y="100" width="500" height="44"/>
                                 <color key="backgroundColor" name="main"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="25"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xmH-X7-Qsd">
-                                <rect key="frame" x="50" y="418" width="314" height="36"/>
+                                <rect key="frame" x="50" y="438" width="500" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Update">
                                     <color key="titleColor" name="label"/>
@@ -225,18 +224,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zgc-Wz-jXy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4042.0289855072465" y="430.58035714285711"/>
+            <point key="canvasLocation" x="1009" y="2539"/>
         </scene>
         <!--Settings-->
         <scene sceneID="MRu-zS-OPl">
             <objects>
                 <viewController id="17v-a2-ZH7" customClass="SettingsViewController" customModule="EnglishCard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zOv-mC-CZo">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bbc-cE-AzM">
-                                <rect key="frame" x="132" y="413" width="150" height="70"/>
+                                <rect key="frame" x="225" y="265" width="150" height="70"/>
                                 <color key="backgroundColor" name="label"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="Wxg-0F-wIT"/>
@@ -265,23 +264,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0hY-uv-s2C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1009" y="1037"/>
+            <point key="canvasLocation" x="2277" y="883"/>
         </scene>
         <!--Add New Card-->
         <scene sceneID="zwd-Tm-Pg9">
             <objects>
                 <viewController id="ugK-Zh-YHX" customClass="UploadViewController" customModule="EnglishCard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VNY-aC-fWB">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Turkish" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cbL-fE-hb4">
-                                <rect key="frame" x="70" y="290" width="274" height="34"/>
+                                <rect key="frame" x="70" y="246" width="460" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Hd-Bm-Ktj">
-                                <rect key="frame" x="70" y="578" width="274" height="47"/>
+                                <rect key="frame" x="70" y="534" width="460" height="47"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="Send">
                                     <color key="titleColor" name="label"/>
@@ -291,7 +290,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="English" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="84M-nM-Dun">
-                                <rect key="frame" x="70" y="394" width="274" height="34"/>
+                                <rect key="frame" x="70" y="350" width="460" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -319,7 +318,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WxE-xT-xa0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2905.7971014492755" y="-468.08035714285711"/>
+            <point key="canvasLocation" x="-300" y="1639"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="wQ8-S3-y2N">
@@ -344,7 +343,7 @@
         <!--Home-->
         <scene sceneID="hRn-SM-eFs">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CQR-EC-fYd" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="navTest" automaticallyAdjustsScrollViewInsets="NO" id="CQR-EC-fYd" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Home" image="homekit" catalog="system" id="gYx-iR-y9u"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="mUM-n5-JRQ">
@@ -365,7 +364,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rk1-T9-ufa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1995.6521739130437" y="430.58035714285711"/>
+            <point key="canvasLocation" x="1009" y="883"/>
         </scene>
         <!--Add Card-->
         <scene sceneID="Snx-1W-Eng">
@@ -391,7 +390,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ybT-0I-SVi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1995.6521739130437" y="-468.08035714285711"/>
+            <point key="canvasLocation" x="-299" y="883"/>
         </scene>
     </scenes>
     <resources>

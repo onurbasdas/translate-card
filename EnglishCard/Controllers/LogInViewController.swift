@@ -9,7 +9,7 @@ import UIKit
 import Firebase
 import NVActivityIndicatorView
 
-class ViewController: UIViewController {
+class LogInViewController: UIViewController {
     
     @IBOutlet weak var emailText: UITextField!
     @IBOutlet weak var passwordText: UITextField!
@@ -27,19 +27,22 @@ class ViewController: UIViewController {
         passwordText.layer.borderWidth = 1.0
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        emailText.resignFirstResponder()
+        passwordText.resignFirstResponder()
+        return(true)
+    }
+    
     @IBAction func signInClicked(_ sender: Any) {
         getSignIn()
     }
     
     @IBAction func signUpClicked(_ sender: Any) {
         getSignUp()
-    }
-    
-    func makeAlert(titleInput: String, messageInput: String) {
-        let alert = UIAlertController(title: titleInput, message: messageInput, preferredStyle: UIAlertController.Style.alert)
-        let okButton = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil)
-        alert.addAction(okButton)
-        self.present(alert, animated: true, completion: nil)
     }
 }
 

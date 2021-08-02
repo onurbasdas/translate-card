@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0EB44FFC6FED94DA4DC2CB55 /* Pods_EnglishCard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CDD24E7DB1E8DAAA451A7CA /* Pods_EnglishCard.framework */; };
+		B907B328268A50ED00869BB4 /* Alert+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B907B327268A50ED00869BB4 /* Alert+Ext.swift */; };
 		B90925A725D2BCE800D4D1FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90925A625D2BCE800D4D1FC /* AppDelegate.swift */; };
 		B90925A925D2BCE800D4D1FC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90925A825D2BCE800D4D1FC /* SceneDelegate.swift */; };
-		B90925AB25D2BCE800D4D1FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90925AA25D2BCE800D4D1FC /* ViewController.swift */; };
+		B90925AB25D2BCE800D4D1FC /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90925AA25D2BCE800D4D1FC /* LogInViewController.swift */; };
 		B90925AE25D2BCE800D4D1FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B90925AC25D2BCE800D4D1FC /* Main.storyboard */; };
 		B90925B025D2BCEA00D4D1FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B90925AF25D2BCEA00D4D1FC /* Assets.xcassets */; };
 		B90925B325D2BCEA00D4D1FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B90925B125D2BCEA00D4D1FC /* LaunchScreen.storyboard */; };
@@ -30,10 +31,11 @@
 		3543396C45589B7C7FE7B5F5 /* Pods-EnglishCard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnglishCard.release.xcconfig"; path = "Target Support Files/Pods-EnglishCard/Pods-EnglishCard.release.xcconfig"; sourceTree = "<group>"; };
 		9CDD24E7DB1E8DAAA451A7CA /* Pods_EnglishCard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EnglishCard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A52501C757CC64CD83D45819 /* Pods-EnglishCard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnglishCard.debug.xcconfig"; path = "Target Support Files/Pods-EnglishCard/Pods-EnglishCard.debug.xcconfig"; sourceTree = "<group>"; };
+		B907B327268A50ED00869BB4 /* Alert+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alert+Ext.swift"; sourceTree = "<group>"; };
 		B90925A325D2BCE800D4D1FC /* EnglishCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnglishCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B90925A625D2BCE800D4D1FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B90925A825D2BCE800D4D1FC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B90925AA25D2BCE800D4D1FC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B90925AA25D2BCE800D4D1FC /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		B90925AD25D2BCE800D4D1FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B90925AF25D2BCEA00D4D1FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B90925B225D2BCEA00D4D1FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				B937CA23263CB1740096BBF1 /* SignUpExt.swift */,
 				B937CA27263CB1D70096BBF1 /* SignInExt.swift */,
 				B91B88ED25D3D1CA00302FB5 /* Model */,
+				B907B327268A50ED00869BB4 /* Alert+Ext.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -143,7 +146,7 @@
 		B97C6D6826321DA2004D1A73 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				B90925AA25D2BCE800D4D1FC /* ViewController.swift */,
+				B90925AA25D2BCE800D4D1FC /* LogInViewController.swift */,
 				B9B16E8525D2C63900C4813C /* UploadViewController.swift */,
 				B9B16E8225D2C61A00C4813C /* FeedViewController.swift */,
 				B91B88F125D529B600302FB5 /* UpdateVC.swift */,
@@ -278,11 +281,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B91B88F225D529B700302FB5 /* UpdateVC.swift in Sources */,
-				B90925AB25D2BCE800D4D1FC /* ViewController.swift in Sources */,
+				B90925AB25D2BCE800D4D1FC /* LogInViewController.swift in Sources */,
 				B9B16E8625D2C63900C4813C /* UploadViewController.swift in Sources */,
 				B90925A725D2BCE800D4D1FC /* AppDelegate.swift in Sources */,
 				B97C6D6D26321EC9004D1A73 /* CardTableViewCell.swift in Sources */,
 				B91B88EF25D3D1E300302FB5 /* CardName.swift in Sources */,
+				B907B328268A50ED00869BB4 /* Alert+Ext.swift in Sources */,
 				B937CA28263CB1D70096BBF1 /* SignInExt.swift in Sources */,
 				B9B16E8325D2C61A00C4813C /* FeedViewController.swift in Sources */,
 				B90925A925D2BCE800D4D1FC /* SceneDelegate.swift in Sources */,
