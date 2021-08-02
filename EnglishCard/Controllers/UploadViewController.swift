@@ -39,6 +39,16 @@ class UploadViewController: UIViewController {
         })
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        turkishText.resignFirstResponder()
+        englishText.resignFirstResponder()
+        return(true)
+    }
+    
     func makeAlert(titleInput: String, messageInput: String) {
         let alert = UIAlertController(title: titleInput, message: messageInput, preferredStyle: UIAlertController.Style.alert)
         let okButton = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil)

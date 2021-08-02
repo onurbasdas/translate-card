@@ -9,7 +9,7 @@ import UIKit
 import Firebase
 import FirebaseFirestore
 
-extension ViewController {
+extension LogInViewController {
     func getSignUp() {
         if emailText.text != "" && passwordText.text != "" {
             Auth.auth().createUser(withEmail: emailText.text!, password: passwordText.text!) { (authdata, error) in

@@ -50,15 +50,17 @@ class UpdateVC: UIViewController {
         })
     }
     
-    
     @IBAction func updateButtonClicked(_ sender: Any) {
         updateData()
         dismiss(animated: true, completion: nil)
+//        loadHomeScreen()
     }
     
     func loadHomeScreen() {
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let mainTabBarController = storyBoard.instantiateViewController(identifier: "test")
+        let mainTabBarController = storyBoard.instantiateViewController(identifier: "navTest")
+        mainTabBarController.modalPresentationStyle = .fullScreen
+        mainTabBarController.modalTransitionStyle = .crossDissolve
         self.present(mainTabBarController, animated: true, completion: nil)
     }
 }

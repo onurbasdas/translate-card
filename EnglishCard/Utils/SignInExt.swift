@@ -10,7 +10,7 @@ import Firebase
 import FirebaseFirestore
 import NVActivityIndicatorView
 
-extension ViewController {
+extension LogInViewController {
     func getSignIn() {
         if emailText.text != "" && passwordText.text != "" {
             Auth.auth().signIn(withEmail: emailText.text!, password: passwordText.text!) { (authdata, error) in
