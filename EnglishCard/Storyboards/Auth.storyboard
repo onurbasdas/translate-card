@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -91,6 +92,22 @@
                                     <action selector="signUpClicked:" destination="ouT-xe-70G" eventType="touchUpInside" id="fsw-yt-Wm9"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XD4-vC-vHX">
+                                <rect key="frame" x="37" y="323" width="41" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="7p2-QB-bVO"/>
+                                    <constraint firstAttribute="width" constant="41" id="WIs-XK-qQ2"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal">
+                                    <color key="titleColor" name="AccentColor"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <imageReference key="image" image="lock" catalog="system" symbolScale="default"/>
+                                </state>
+                                <connections>
+                                    <action selector="passwordHideClicked:" destination="ouT-xe-70G" eventType="touchUpInside" id="c0P-AH-xGq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="g1I-yt-eBt"/>
                         <color key="backgroundColor" name="main"/>
@@ -107,6 +124,7 @@
                             <constraint firstItem="fZ1-V0-1va" firstAttribute="top" secondItem="pg9-4t-6l6" secondAttribute="bottom" constant="9" id="NUy-jJ-S3M"/>
                             <constraint firstItem="AQ5-ra-VBn" firstAttribute="top" secondItem="cWp-mb-woY" secondAttribute="bottom" constant="75" id="Q5D-hs-d8T"/>
                             <constraint firstItem="g1I-yt-eBt" firstAttribute="trailing" secondItem="fZ1-V0-1va" secondAttribute="trailing" constant="37" id="SNH-ix-G36"/>
+                            <constraint firstItem="naX-tB-9zu" firstAttribute="top" secondItem="XD4-vC-vHX" secondAttribute="bottom" constant="74.5" id="UHM-xq-ZnJ"/>
                             <constraint firstItem="naX-tB-9zu" firstAttribute="leading" secondItem="g1I-yt-eBt" secondAttribute="leading" constant="37" id="Z1f-ve-nY7"/>
                             <constraint firstItem="g1I-yt-eBt" firstAttribute="trailing" secondItem="pg9-4t-6l6" secondAttribute="trailing" constant="37" id="Z3D-Mb-XM5"/>
                             <constraint firstItem="fZ1-V0-1va" firstAttribute="leading" secondItem="g1I-yt-eBt" secondAttribute="leading" constant="37" id="ZAb-TQ-etV"/>
@@ -114,23 +132,26 @@
                             <constraint firstItem="Zqp-KM-Zb3" firstAttribute="leading" secondItem="g1I-yt-eBt" secondAttribute="leading" constant="37" id="chN-7l-JQl"/>
                             <constraint firstItem="pg9-4t-6l6" firstAttribute="top" secondItem="Zqp-KM-Zb3" secondAttribute="bottom" constant="20" id="gCb-zN-sAx"/>
                             <constraint firstItem="g1I-yt-eBt" firstAttribute="trailing" secondItem="AQ5-ra-VBn" secondAttribute="trailing" constant="37" id="gcj-RF-dRS"/>
+                            <constraint firstItem="XD4-vC-vHX" firstAttribute="top" secondItem="pg9-4t-6l6" secondAttribute="bottom" constant="8.5" id="jBT-aR-Ca7"/>
                             <constraint firstItem="Zqp-KM-Zb3" firstAttribute="top" secondItem="AQ5-ra-VBn" secondAttribute="bottom" constant="5" id="lWo-l5-ige"/>
                             <constraint firstItem="jW6-0C-pSQ" firstAttribute="leading" secondItem="g1I-yt-eBt" secondAttribute="leading" constant="37" id="mUw-zE-fd8"/>
                             <constraint firstItem="pg9-4t-6l6" firstAttribute="leading" secondItem="g1I-yt-eBt" secondAttribute="leading" constant="37" id="ok8-qT-rd6"/>
                             <constraint firstItem="5ux-e0-E7o" firstAttribute="leading" secondItem="g1I-yt-eBt" secondAttribute="leading" constant="37" id="rlX-g2-hoa"/>
+                            <constraint firstItem="XD4-vC-vHX" firstAttribute="leading" secondItem="g1I-yt-eBt" secondAttribute="leading" constant="37" id="sqo-pm-vfO"/>
                             <constraint firstItem="g1I-yt-eBt" firstAttribute="trailing" secondItem="5ux-e0-E7o" secondAttribute="trailing" constant="37" id="vCx-ZZ-IV9"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fFg-nf-OPd"/>
                     <connections>
                         <outlet property="emailText" destination="Zqp-KM-Zb3" id="Fcv-Dt-qXS"/>
+                        <outlet property="lockButton" destination="XD4-vC-vHX" id="gdg-IK-vws"/>
                         <outlet property="passwordText" destination="fZ1-V0-1va" id="KNW-4O-TCP"/>
                         <segue destination="Gap-nG-ObW" kind="presentation" identifier="toFeedVC" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="iKM-F8-SFW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hmh-Zh-hY1" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-300" y="86"/>
+            <point key="canvasLocation" x="-300" y="85.714285714285708"/>
         </scene>
         <!--Main-->
         <scene sceneID="EIf-SB-izE">
@@ -144,6 +165,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="lock" catalog="system" width="128" height="128"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="label">
             <color red="1" green="0.47843137254901963" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
