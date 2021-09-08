@@ -21,6 +21,9 @@
 		B9317C9426BC112A00832081 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9317C9326BC112A00832081 /* Auth.storyboard */; };
 		B937CA24263CB1740096BBF1 /* SignUpExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = B937CA23263CB1740096BBF1 /* SignUpExt.swift */; };
 		B937CA28263CB1D70096BBF1 /* SignInExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = B937CA27263CB1D70096BBF1 /* SignInExt.swift */; };
+		B97AF8CF26E8F2DA00A7645C /* AnimateLaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97AF8CE26E8F2DA00A7645C /* AnimateLaunchViewController.swift */; };
+		B97AF8D926E90EE100A7645C /* 1amw.gif in Resources */ = {isa = PBXBuildFile; fileRef = B97AF8D826E90EE100A7645C /* 1amw.gif */; };
+		B97AF8DB26E91DBD00A7645C /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97AF8DA26E91DBD00A7645C /* TabBarViewController.swift */; };
 		B97C6D6D26321EC9004D1A73 /* CardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97C6D6B26321EC8004D1A73 /* CardTableViewCell.swift */; };
 		B97C6D6E26321EC9004D1A73 /* CardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B97C6D6C26321EC8004D1A73 /* CardTableViewCell.xib */; };
 		B9B16E8325D2C61A00C4813C /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B16E8225D2C61A00C4813C /* FeedViewController.swift */; };
@@ -47,6 +50,9 @@
 		B9317C9326BC112A00832081 /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		B937CA23263CB1740096BBF1 /* SignUpExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpExt.swift; sourceTree = "<group>"; };
 		B937CA27263CB1D70096BBF1 /* SignInExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInExt.swift; sourceTree = "<group>"; };
+		B97AF8CE26E8F2DA00A7645C /* AnimateLaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimateLaunchViewController.swift; sourceTree = "<group>"; };
+		B97AF8D826E90EE100A7645C /* 1amw.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 1amw.gif; sourceTree = "<group>"; };
+		B97AF8DA26E91DBD00A7645C /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		B97C6D6B26321EC8004D1A73 /* CardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTableViewCell.swift; sourceTree = "<group>"; };
 		B97C6D6C26321EC8004D1A73 /* CardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardTableViewCell.xib; sourceTree = "<group>"; };
 		B9B16E8225D2C61A00C4813C /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
@@ -118,8 +124,8 @@
 		B92DD134263B9991009385EF /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				B97AF8D826E90EE100A7645C /* 1amw.gif */,
 				B90925AF25D2BCEA00D4D1FC /* Assets.xcassets */,
-				B90925B125D2BCEA00D4D1FC /* LaunchScreen.storyboard */,
 				B90925A825D2BCE800D4D1FC /* SceneDelegate.swift */,
 				B90925A625D2BCE800D4D1FC /* AppDelegate.swift */,
 			);
@@ -129,6 +135,7 @@
 		B9317C9226BC111200832081 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				B90925B125D2BCEA00D4D1FC /* LaunchScreen.storyboard */,
 				B9317C9326BC112A00832081 /* Auth.storyboard */,
 				B90925AC25D2BCE800D4D1FC /* Main.storyboard */,
 			);
@@ -157,6 +164,8 @@
 		B97C6D6826321DA2004D1A73 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				B97AF8DA26E91DBD00A7645C /* TabBarViewController.swift */,
+				B97AF8CE26E8F2DA00A7645C /* AnimateLaunchViewController.swift */,
 				B90925AA25D2BCE800D4D1FC /* LogInViewController.swift */,
 				B9B16E8525D2C63900C4813C /* UploadViewController.swift */,
 				B9B16E8225D2C61A00C4813C /* FeedViewController.swift */,
@@ -235,6 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9317C9426BC112A00832081 /* Auth.storyboard in Resources */,
+				B97AF8D926E90EE100A7645C /* 1amw.gif in Resources */,
 				B90925B325D2BCEA00D4D1FC /* LaunchScreen.storyboard in Resources */,
 				B90925BC25D2BD9900D4D1FC /* GoogleService-Info.plist in Resources */,
 				B97C6D6E26321EC9004D1A73 /* CardTableViewCell.xib in Resources */,
@@ -296,6 +306,8 @@
 				B90925AB25D2BCE800D4D1FC /* LogInViewController.swift in Sources */,
 				B9B16E8625D2C63900C4813C /* UploadViewController.swift in Sources */,
 				B90925A725D2BCE800D4D1FC /* AppDelegate.swift in Sources */,
+				B97AF8DB26E91DBD00A7645C /* TabBarViewController.swift in Sources */,
+				B97AF8CF26E8F2DA00A7645C /* AnimateLaunchViewController.swift in Sources */,
 				B97C6D6D26321EC9004D1A73 /* CardTableViewCell.swift in Sources */,
 				B91B88EF25D3D1E300302FB5 /* CardName.swift in Sources */,
 				B907B328268A50ED00869BB4 /* Alert+Ext.swift in Sources */,

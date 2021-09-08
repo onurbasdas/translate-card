@@ -8,6 +8,7 @@
 import UIKit
 import Firebase
 import NVActivityIndicatorView
+import SwiftyGif
 
 class LogInViewController: UIViewController {
     

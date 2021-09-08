@@ -7,10 +7,16 @@
 
 import UIKit
 import Firebase
+import AMTabView
 
-class SettingsViewController: UIViewController {
+class SettingsViewController: UIViewController, TabItem {
     
     @IBOutlet var logoutButton: UIButton!
+    
+    var tabImage: UIImage? {
+      return UIImage(named: "tab3")
+    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -8,8 +8,9 @@
 import UIKit
 import Firebase
 import FirebaseFirestore
+import AMTabView
 
-class FeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class FeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, TabItem {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -18,6 +19,11 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     var db: Firestore!
     var chosenTurkishText: String?
     var chosenEnglishText: String?
+    
+    var tabImage: UIImage? {
+      return UIImage(named: "tab2")
+    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()

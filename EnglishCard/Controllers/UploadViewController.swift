@@ -8,9 +8,10 @@
 import UIKit
 import Firebase
 import FirebaseFirestore
+import AMTabView
 
 
-class UploadViewController: UIViewController {
+class UploadViewController: UIViewController, TabItem {
     
     @IBOutlet weak var turkishText: UITextField!
     @IBOutlet weak var englishText: UITextField!
@@ -19,7 +20,10 @@ class UploadViewController: UIViewController {
     var db: Firestore!
     var childArray = [Child]()
     
-
+    var tabImage: UIImage? {
+      return UIImage(named: "tab1")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -28,7 +32,7 @@ class UploadViewController: UIViewController {
         let firestoreDatabase = Firestore.firestore()
         let userID : String = (Auth.auth().currentUser?.uid)!
         let childArray = ["turkish" : turkishText.text!, "english" : englishText.text!] as [String: Any]
-         firestoreDatabase.collection("Users").document(userID).collection("Cards").addDocument(data: childArray, completion: { (error) in
+        firestoreDatabase.collection("Users").document(userID).collection("Cards").addDocument(data: childArray, completion: { (error) in
             if error != nil {
                 self.makeAlert(titleInput: "Error", messageInput: error?.localizedDescription ?? "Error")
             } else {

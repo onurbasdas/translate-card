@@ -16,5 +16,7 @@ pod 'Firebase/Firestore'
 pod 'Firebase/Core'
 pod 'Firebase/Storage'
 pod 'NVActivityIndicatorView'
+pod 'SwiftyGif'
+pod 'AMTabView'
 
 end

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ouT-xe-70G">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VYO-Gj-poR">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -10,6 +10,48 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Animate Launch View Controller-->
+        <scene sceneID="gdX-pk-tlR">
+            <objects>
+                <viewController id="VYO-Gj-poR" customClass="AnimateLaunchViewController" customModule="EnglishCard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xUo-L7-HP7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="English Card" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cxq-1i-TcM">
+                                <rect key="frame" x="0.0" y="487" width="414" height="111"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <color key="textColor" name="label"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bml-On-NsI">
+                                <rect key="frame" x="25" y="108" width="364" height="327"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="327" id="gYQ-yX-jVl"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="QW0-be-K3P"/>
+                        <color key="backgroundColor" name="main"/>
+                        <constraints>
+                            <constraint firstItem="cxq-1i-TcM" firstAttribute="top" secondItem="QW0-be-K3P" secondAttribute="top" constant="443" id="29p-L2-Ahd"/>
+                            <constraint firstItem="QW0-be-K3P" firstAttribute="bottom" secondItem="cxq-1i-TcM" secondAttribute="bottom" constant="264" id="3Y1-5k-fDV"/>
+                            <constraint firstItem="cxq-1i-TcM" firstAttribute="leading" secondItem="QW0-be-K3P" secondAttribute="leading" id="4eL-Dy-rMm"/>
+                            <constraint firstItem="bml-On-NsI" firstAttribute="top" secondItem="QW0-be-K3P" secondAttribute="top" constant="64" id="HFR-bh-Bvj"/>
+                            <constraint firstItem="cxq-1i-TcM" firstAttribute="trailing" secondItem="QW0-be-K3P" secondAttribute="trailing" id="VC3-vN-DFJ"/>
+                            <constraint firstItem="QW0-be-K3P" firstAttribute="trailing" secondItem="bml-On-NsI" secondAttribute="trailing" constant="25" id="hOs-0A-2YL"/>
+                            <constraint firstItem="bml-On-NsI" firstAttribute="leading" secondItem="QW0-be-K3P" secondAttribute="leading" constant="25" id="oNd-tS-xKf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="appcentLabel" destination="cxq-1i-TcM" id="6hl-Zw-QjB"/>
+                        <outlet property="logoImageView" destination="bml-On-NsI" id="ccX-Zb-Htb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6J3-7P-Y4y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1133.3333333333335" y="85.714285714285708"/>
+        </scene>
         <!--Log In View Controller-->
         <scene sceneID="lPn-dD-99D">
             <objects>
