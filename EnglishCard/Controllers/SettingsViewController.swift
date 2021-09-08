@@ -28,7 +28,7 @@ class SettingsViewController: UIViewController {
     @IBAction func logoutClicked(_ sender: Any) {
         do{
             try Auth.auth().signOut()
-            loadHomeScreen(name: "Main", identifier: "backLoginVC")
+            loadHomeScreen(name: "Auth", identifier: "backLoginVC")
             
         } catch {
             print("Error")

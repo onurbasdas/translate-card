@@ -18,6 +18,7 @@
 		B90925BC25D2BD9900D4D1FC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B90925BB25D2BD9900D4D1FC /* GoogleService-Info.plist */; };
 		B91B88EF25D3D1E300302FB5 /* CardName.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91B88EE25D3D1E300302FB5 /* CardName.swift */; };
 		B91B88F225D529B700302FB5 /* UpdateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91B88F125D529B600302FB5 /* UpdateVC.swift */; };
+		B9317C9426BC112A00832081 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9317C9326BC112A00832081 /* Auth.storyboard */; };
 		B937CA24263CB1740096BBF1 /* SignUpExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = B937CA23263CB1740096BBF1 /* SignUpExt.swift */; };
 		B937CA28263CB1D70096BBF1 /* SignInExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = B937CA27263CB1D70096BBF1 /* SignInExt.swift */; };
 		B97C6D6D26321EC9004D1A73 /* CardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97C6D6B26321EC8004D1A73 /* CardTableViewCell.swift */; };
@@ -43,6 +44,7 @@
 		B90925BB25D2BD9900D4D1FC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B91B88EE25D3D1E300302FB5 /* CardName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardName.swift; sourceTree = "<group>"; };
 		B91B88F125D529B600302FB5 /* UpdateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateVC.swift; sourceTree = "<group>"; };
+		B9317C9326BC112A00832081 /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		B937CA23263CB1740096BBF1 /* SignUpExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpExt.swift; sourceTree = "<group>"; };
 		B937CA27263CB1D70096BBF1 /* SignInExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInExt.swift; sourceTree = "<group>"; };
 		B97C6D6B26321EC8004D1A73 /* CardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTableViewCell.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 		B90925A525D2BCE800D4D1FC /* EnglishCard */ = {
 			isa = PBXGroup;
 			children = (
+				B9317C9226BC111200832081 /* Storyboards */,
 				B91B88ED25D3D1CA00302FB5 /* Model */,
 				B937CA1E263CAF8E0096BBF1 /* Utils */,
 				B9384A7125E658330085BAD0 /* View */,
@@ -100,7 +103,6 @@
 				B92DD134263B9991009385EF /* Helpers */,
 				B90925BB25D2BD9900D4D1FC /* GoogleService-Info.plist */,
 				B90925B425D2BCEA00D4D1FC /* Info.plist */,
-				B90925AC25D2BCE800D4D1FC /* Main.storyboard */,
 			);
 			path = EnglishCard;
 			sourceTree = "<group>";
@@ -122,6 +124,15 @@
 				B90925A625D2BCE800D4D1FC /* AppDelegate.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		B9317C9226BC111200832081 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				B9317C9326BC112A00832081 /* Auth.storyboard */,
+				B90925AC25D2BCE800D4D1FC /* Main.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		B937CA1E263CAF8E0096BBF1 /* Utils */ = {
@@ -223,6 +234,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9317C9426BC112A00832081 /* Auth.storyboard in Resources */,
 				B90925B325D2BCEA00D4D1FC /* LaunchScreen.storyboard in Resources */,
 				B90925BC25D2BD9900D4D1FC /* GoogleService-Info.plist in Resources */,
 				B97C6D6E26321EC9004D1A73 /* CardTableViewCell.xib in Resources */,
