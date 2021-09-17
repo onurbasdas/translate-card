@@ -1,4 +1,4 @@
-# JsonPlaceHolder
+# English Card
 
 [![Swift](https://img.shields.io/badge/Swift-5-orange.svg)](https://swift.org)
 [![Xcode](https://img.shields.io/badge/Xcode-12.4-blue.svg)](https://developer.apple.com/xcode)
@@ -6,7 +6,7 @@
 [![MIT](https://img.shields.io/badge/licenses-MIT-red.svg)](https://opensource.org/licenses/MIT)
 
 ## Overview
-I included it in my project using the jsonplaceholder api.
+The application was made to learn English words.
 
 ## Requirements
 * iOS 13+
@@ -16,13 +16,13 @@ I included it in my project using the jsonplaceholder api.
 
 ## Screenshots
 
-| ![Search](images/login.png) | ![HomeDark](images/album.png) | 
+| ![Search](images/1.png) | ![HomeDark](images/2.png) | 
 |:---:|:---:|
 
-| ![Search Typing](images/segment.png) | ![HomeDark](images/photos.png) | 
+| ![Search Typing](images/3.png) | ![HomeDark](images/4.png) | 
 |:---:|:---:|
 
-| ![Result](images/comments.png) | ![HomeDark](images/profil.png) | 
+| ![Result](images/5.png) | ![HomeDark](images/6.png) | 
 |:---:|:---:|
 
 
