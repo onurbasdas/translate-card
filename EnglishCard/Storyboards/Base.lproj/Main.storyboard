@@ -14,11 +14,11 @@
             <objects>
                 <viewController storyboardIdentifier="test" id="F6N-Hc-nlq" customClass="FeedViewController" customModule="EnglishCard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BJk-NS-MZd">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="C2E-E0-p9O">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="719"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="F6N-Hc-nlq" id="4bp-pI-aIN"/>
@@ -31,7 +31,7 @@
                         <constraints>
                             <constraint firstItem="C2E-E0-p9O" firstAttribute="top" secondItem="sYS-lH-eDP" secondAttribute="top" id="1rt-xc-7vl"/>
                             <constraint firstItem="C2E-E0-p9O" firstAttribute="leading" secondItem="sYS-lH-eDP" secondAttribute="leading" id="Duu-q3-Mmw"/>
-                            <constraint firstItem="C2E-E0-p9O" firstAttribute="bottom" secondItem="sYS-lH-eDP" secondAttribute="bottom" id="W4N-hm-UaN"/>
+                            <constraint firstItem="C2E-E0-p9O" firstAttribute="bottom" secondItem="sYS-lH-eDP" secondAttribute="bottom" constant="-55" id="W4N-hm-UaN"/>
                             <constraint firstItem="C2E-E0-p9O" firstAttribute="centerX" secondItem="BJk-NS-MZd" secondAttribute="centerX" id="eHh-IU-23U"/>
                         </constraints>
                     </view>
@@ -43,14 +43,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pVY-YQ-1Nd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1009" y="1639"/>
+            <point key="canvasLocation" x="1008.6956521739131" y="1638.6160714285713"/>
         </scene>
         <!--UpdateVC-->
         <scene sceneID="lSe-fP-G4n">
             <objects>
                 <viewController id="ae1-VU-OaM" customClass="UpdateVC" customModule="EnglishCard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="52v-TV-kBe">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="English" borderStyle="roundedRect" placeholder="English" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jUt-Qx-3tv">
@@ -109,15 +109,26 @@
             <objects>
                 <viewController id="17v-a2-ZH7" customClass="SettingsViewController" customModule="EnglishCard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zOv-mC-CZo">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Ndg-lh-zWb">
+                                <rect key="frame" x="20" y="75" width="374" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="bst-LU-wM5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4G3-UI-5lT">
+                                <rect key="frame" x="87" y="160" width="240" height="212"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bbc-cE-AzM">
-                                <rect key="frame" x="132" y="413" width="150" height="70"/>
+                                <rect key="frame" x="132" y="482" width="150" height="70"/>
                                 <color key="backgroundColor" name="label"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="Wxg-0F-wIT"/>
-                                    <constraint firstAttribute="height" constant="70" id="xrN-ut-3KT"/>
+                                    <constraint firstAttribute="height" constant="70" id="Fgv-fu-Zhj"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <state key="normal" title="Logout">
@@ -131,29 +142,39 @@
                         <viewLayoutGuide key="safeArea" id="ajg-ju-oON"/>
                         <color key="backgroundColor" name="main"/>
                         <constraints>
-                            <constraint firstItem="Bbc-cE-AzM" firstAttribute="centerX" secondItem="zOv-mC-CZo" secondAttribute="centerX" id="7SE-GZ-LE2"/>
-                            <constraint firstItem="Bbc-cE-AzM" firstAttribute="centerY" secondItem="zOv-mC-CZo" secondAttribute="centerY" id="8bI-Zf-Oah"/>
+                            <constraint firstItem="Ndg-lh-zWb" firstAttribute="top" secondItem="ajg-ju-oON" secondAttribute="top" constant="75" id="4pd-Fn-cYE"/>
+                            <constraint firstItem="Bbc-cE-AzM" firstAttribute="top" secondItem="4G3-UI-5lT" secondAttribute="bottom" constant="110" id="AfU-yk-YiS"/>
+                            <constraint firstItem="Bbc-cE-AzM" firstAttribute="leading" secondItem="ajg-ju-oON" secondAttribute="leading" constant="132" id="NiW-cd-A9Z"/>
+                            <constraint firstItem="ajg-ju-oON" firstAttribute="trailing" secondItem="Bbc-cE-AzM" secondAttribute="trailing" constant="132" id="Nzt-R9-RKY"/>
+                            <constraint firstItem="ajg-ju-oON" firstAttribute="trailing" secondItem="4G3-UI-5lT" secondAttribute="trailing" constant="87" id="QHW-T6-POf"/>
+                            <constraint firstItem="Bbc-cE-AzM" firstAttribute="top" secondItem="Ndg-lh-zWb" secondAttribute="bottom" constant="367" id="TKN-KJ-l4f"/>
+                            <constraint firstItem="4G3-UI-5lT" firstAttribute="leading" secondItem="ajg-ju-oON" secondAttribute="leading" constant="87" id="TKk-Ba-Iiw"/>
+                            <constraint firstItem="4G3-UI-5lT" firstAttribute="top" secondItem="Ndg-lh-zWb" secondAttribute="bottom" constant="45" id="UhN-hJ-UrI"/>
+                            <constraint firstItem="ajg-ju-oON" firstAttribute="trailing" secondItem="Ndg-lh-zWb" secondAttribute="trailing" constant="20" id="oUG-Tk-aNa"/>
+                            <constraint firstItem="Ndg-lh-zWb" firstAttribute="leading" secondItem="ajg-ju-oON" secondAttribute="leading" constant="20" id="qJT-1X-BMR"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="gSN-AG-ZW8"/>
                     <connections>
+                        <outlet property="imageProfile" destination="4G3-UI-5lT" id="e37-m5-xcB"/>
+                        <outlet property="infoLabel" destination="Ndg-lh-zWb" id="9Av-rU-NY2"/>
                         <outlet property="logoutButton" destination="Bbc-cE-AzM" id="5s7-mi-BFA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0hY-uv-s2C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2275" y="1639"/>
+            <point key="canvasLocation" x="2273.913043478261" y="1638.6160714285713"/>
         </scene>
         <!--Add New Card-->
         <scene sceneID="zwd-Tm-Pg9">
             <objects>
                 <viewController id="ugK-Zh-YHX" customClass="UploadViewController" customModule="EnglishCard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VNY-aC-fWB">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Turkish" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cbL-fE-hb4">
-                                <rect key="frame" x="70" y="238" width="274" height="50"/>
+                                <rect key="frame" x="70" y="150" width="274" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="WLN-f3-pdL"/>
                                 </constraints>
@@ -161,7 +182,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Hd-Bm-Ktj">
-                                <rect key="frame" x="70" y="526" width="274" height="47"/>
+                                <rect key="frame" x="70" y="438" width="274" height="47"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="Send">
                                     <color key="titleColor" name="label"/>
@@ -171,7 +192,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="English" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="84M-nM-Dun">
-                                <rect key="frame" x="70" y="348" width="274" height="50"/>
+                                <rect key="frame" x="70" y="260" width="274" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="gSV-0D-raf"/>
                                 </constraints>
@@ -225,7 +246,7 @@
                 <navigationController storyboardIdentifier="navTest" automaticallyAdjustsScrollViewInsets="NO" id="CQR-EC-fYd" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Home" image="homekit" catalog="system" id="gYx-iR-y9u"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mUM-n5-JRQ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="mUM-n5-JRQ">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" name="main"/>
@@ -251,7 +272,7 @@
                 <navigationController storyboardIdentifier="one" automaticallyAdjustsScrollViewInsets="NO" id="Tnh-ot-wqh" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Add Card" image="plus" catalog="system" id="5Ks-Ne-Txy"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="v6S-Mm-w5b">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="v6S-Mm-w5b">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" name="main"/>
@@ -277,7 +298,7 @@
                 <navigationController storyboardIdentifier="three" automaticallyAdjustsScrollViewInsets="NO" id="ADU-dO-N2j" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Settings" image="s.circle.fill" catalog="system" id="QAO-DF-t5D"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AUD-nc-SMd">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="AUD-nc-SMd">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" name="main"/>

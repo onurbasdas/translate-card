@@ -38,7 +38,7 @@ class UploadViewController: UIViewController, TabItem {
             } else {
                 self.turkishText.text = ""
                 self.englishText.text = ""
-                self.tabBarController?.selectedIndex = 1
+               // self.tabBarController?.selectedIndex = 1
             }
         })
     }

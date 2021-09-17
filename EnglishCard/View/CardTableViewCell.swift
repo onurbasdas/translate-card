@@ -9,6 +9,7 @@ import UIKit
 import Firebase
 
 class CardTableViewCell: UITableViewCell {
+    
     @IBOutlet var turkishText: UILabel!
     @IBOutlet var englishText: UILabel!
     @IBOutlet var btnCard: UIButton!
@@ -24,12 +25,18 @@ class CardTableViewCell: UITableViewCell {
         backView.layer.cornerRadius = 15
     }
     
+//    private let colors : [UIColor] = [
+//        .systemBlue, .systemPink, .systemPurple, .systemRed, .systemGray5, .systemGreen, .systemTeal, .magenta, .systemOrange, .systemIndigo, .cyan
+//    ]
+    
     func configure() {
         btnCard.tintColor = .white
         let redValue = CGFloat(drand48())
         let greenValue = CGFloat(drand48())
         let blueValue = CGFloat(drand48())
         btnCard.backgroundColor = UIColor(red: redValue, green: greenValue, blue: blueValue, alpha: 1.0)
+        
+        //btnCard.backgroundColor = colors.randomElement()
         
         backView.layer.masksToBounds = false
         backView.layer.cornerRadius = 15.0

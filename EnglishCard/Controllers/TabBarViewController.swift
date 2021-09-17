@@ -18,14 +18,14 @@ class TabBarViewController: AMTabsViewController {
 
   private func setTabsControllers() {
     let storyboard = UIStoryboard(name: "Main", bundle: nil)
-    let graveViewController = storyboard.instantiateViewController(withIdentifier: "one")
-    let bumpkinViewController = storyboard.instantiateViewController(withIdentifier: "navTest")
-    let fireworkViewController = storyboard.instantiateViewController(withIdentifier: "three")
+    let uploadViewController = storyboard.instantiateViewController(withIdentifier: "one")
+    let feedViewController = storyboard.instantiateViewController(withIdentifier: "navTest")
+    let settingskViewController = storyboard.instantiateViewController(withIdentifier: "three")
 
     viewControllers = [
-      graveViewController,
-      bumpkinViewController,
-      fireworkViewController
+      uploadViewController,
+      feedViewController,
+      settingskViewController
     ]
   }
 }
